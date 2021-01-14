@@ -5,13 +5,12 @@ let gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
-	cssmin = require('gulp-cssmin');
+	cleanCSS = require('gulp-clean-css');
 
-	// CleanCSS = require('clean-css');
 
 
 gulp.task('sass', function () {
-	return gulp.src('app/scss/style.scss')
+	return gulp.src('app/scss/**/*.scss')
 		.pipe(sass({
 			outputStyle: 'compressed'
 		}))
@@ -34,7 +33,7 @@ gulp.task('style', function(){
 		'node_modules/magnific-popup/dist/magnific-popup.css'
 	])
 	.pipe(concat('libs.min.css'))
-	.pipe(cssmin())
+	.pipe(cleanCSS({compatibility: 'ie8'}))
 	.pipe(gulp.dest('app/css'))
 });
 
