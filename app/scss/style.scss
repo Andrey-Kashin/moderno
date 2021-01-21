@@ -291,6 +291,9 @@
 	}
 
 	&-star {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		font-size: 12px;
 		font-weight: 400;
 		color: #b0bec5;
@@ -301,3 +304,34 @@
 }
 
 // end section__products
+
+// start section products-slider
+
+.products-slider {
+	padding: 123px 0 121px;
+	text-align: center;
+}
+
+.slick-dots {
+	margin-top: 50px;
+	li {
+		display: inline-block;
+		margin-left: 3px;
+		margin-right: 3px;
+		&.slick-active {
+			button {
+				background-color: $color-green;
+			}
+		}
+		button {
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			background-color: #e8e8e8;
+			border:none;
+			font-size: 0;
+			outline: none;
+			cursor: pointer;
+		}
+	}
+}
