@@ -17,10 +17,24 @@ li {
 	list-style: none;
 }
 
-.container{
+.section__title {
+	margin: 0;
+	font-size: 36px;
+	font-weight: 700;
+	color: $bg-dark;
+	margin-bottom: 60px;
+}
+
+.container {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+
+.container__fluid {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 30px;
 }
 
 body {
