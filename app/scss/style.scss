@@ -65,7 +65,7 @@
 	box-shadow: -3px 5px 9px 0px rgba(50, 50, 50, 0.75);
 	top: 62px;
 	right: 0;
-	transition: all .3s;
+	transition: all 0.3s;
 	height: 0;
 	overflow: hidden;
 	&-box {
@@ -140,6 +140,94 @@
 	background-color: $color-red;
 	text-decoration: none;
 }
+
+.menu__message,
+.menu__bell {
+	position: absolute;
+	min-width: 268px;
+	width: 100%;
+	min-height: auto;
+	padding-top: 0;
+	padding-bottom: 0;
+	background-color: $color-white;
+	border: 0px solid #cccccc;
+	box-shadow: -3px 5px 9px 0px rgba(50, 50, 50, 0.75);
+	top: 62px;
+	right: 0;
+	transition: all 0.3s;
+	height: 0;
+	overflow: hidden;
+	&-link {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		text-decoration: none;
+		font-family: "icomoon";
+		font-size: 16px;
+		font-weight: 400;
+		color: #b0bec5;
+	}
+	&-box {
+		padding: 20px;
+		border-bottom: 1px solid #e0e0e0;
+		display: flex;
+		position: relative;
+	}
+	&-img {
+		width: 48px;
+		height: 48px;
+		margin-right: 20px;
+	}
+}
+
+.circle__box-message,
+.circle__box-bell {
+	position: relative;
+	padding-bottom: 30px;
+	margin-top: 30px;
+	&:hover {
+		.menu__message,
+		.menu__bell {
+			border-width: 1px;
+			height: auto;
+			overflow: auto;
+			padding-top: 5px;
+		}
+	}
+}
+
+.icons-color::before {
+	color: $color-orange;
+}
+
+.menu__user {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	position: relative;
+	&-name {
+		font-family: "Roboto", sans-serif;
+		font-size: 12px;
+		font-weight: 700;
+		color: $bg-dark;
+		text-decoration: none;
+	}
+	&-status {
+		font-family: "Roboto", sans-serif;
+		font-size: 11px;
+		font-weight: 400;
+		color: $color-green;
+		text-decoration: none;
+	}
+	&-data {
+		font-family: "Roboto", sans-serif;
+		font-size: 10px;
+		font-weight: 400;
+		color: #90a4ae;
+	}
+}
+
+
 .circle__btn {
 	width: 34px;
 	height: 34px;
@@ -154,6 +242,13 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	&:hover {
+		&.icon-bell-o,
+		&.icon-envelope-o,
+		&.icon-shopping-cart {
+			color: $color-black;
+		}
+	}
 	span {
 		width: 18px;
 		height: 18px;
